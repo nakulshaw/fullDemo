@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Login from "./pages/Login.jsx"
+import { Outlet } from 'react-router';
 import { AuthLayout } from './components/index.js';
 
 function App() {
@@ -15,9 +15,9 @@ function App() {
     <div className="p-6">
       <h1 className="text-2xl font-bold">{message}</h1>
       <p className='text-purple-900'>Deployment successful</p>
-      <AuthLayout authentication={false}>
-          <Login />
-      </AuthLayout>
+      
+      <Outlet/>
+      
     </div>
   );
 }
