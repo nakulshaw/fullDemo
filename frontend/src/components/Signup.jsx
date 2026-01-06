@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import authService from '../appwrite/auth.js'
-import {Link ,useNavigate} from 'react-router-dom'
+import {Link ,useNavigate} from 'react-router'
 import {login} from '../store/authSlice.js'
 import {Button, Input, Logo} from './index.js'
 import {useDispatch} from 'react-redux'
@@ -38,7 +38,7 @@ function Signup() {
                 <p className="mt-2 text-center text-base text-black/60">
                     Already have an account?&nbsp;
                     <Link
-                        to="/login"
+                        to="/"
                         className="font-medium text-primary transition-all duration-200 hover:underline"
                     >
                         Sign In
